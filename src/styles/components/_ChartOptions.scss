@@ -1,0 +1,95 @@
+.overlay{
+  	position: fixed;
+  	width: 50%;
+  	height: 100%;
+    overflow: scroll;
+  	top: 75px;
+  	left: 0;
+  	background: #D6D6D6;
+}
+.overlay .overlay-close{
+  font-size: 64px;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  color: #D6D6D6;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.overlay-slide{
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-25%);
+  transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+.open{
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 0.4s, visibility .2s, transform .2s;
+}
+
+
+.form-style{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    width: auto;
+    padding: 30px;
+    background: #D6D6D6;
+    margin: 0;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+      -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+      -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+
+.form-style h2{
+    background: #C80815;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+    margin: -30px -30px 30px -30px;
+}
+.form-style select
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: #E9E9E9;
+    margin: 10px 0 10px 0;
+    font-size: 16px;
+    height: 45px;
+}
+.form-style input[type="button"],
+.form-style input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #C80815;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #C80815;
+    box-shadow: inset 0px 1px 0px 0px #C80815;
+    background-color: #C80815;
+    border: 1px solid #000000;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.form-style input[type="button"]:hover,
+.form-style input[type="submit"]:hover {
+   font-size: 17px;
+}
