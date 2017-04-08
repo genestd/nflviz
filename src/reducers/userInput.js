@@ -22,6 +22,8 @@ const charts = [
   zAxis: {field: '', description: '', scale: ''},
   title: 'Wins vs. Teams'
 },
+]
+/*
 { type: 'bubble',
   description: 'Bubble Graph',
   file: 'data.csv',
@@ -30,8 +32,7 @@ const charts = [
   zAxis: {field: 'OFF_AVG_TIME', description: 'Offensive Average Time of Drive', scale: 'time'},
   title: 'Effect of Offensive Avg Drive Time on Wins vs. Offensive Avg Points'
   }
-]
-
+*/
 const INITIAL_STATE = { chart: charts[0],
                         dataChange: false,
                         chartChange: false

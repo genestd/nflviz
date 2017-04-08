@@ -82,7 +82,7 @@ class ChartOptions extends React.Component{
               <select name='type' value={this.state.chartType} onChange={(e)=>this.handleSelectChartEvent(e)}>
                 <option value='scatterplot'>Scatter Plot</option>
                 <option value='bargraph'>Bar Graph</option>
-                <option value='bubble'>Bubble Chart</option>
+                {/*<option value='bubble'>Bubble Chart</option>*/}
               </select>
               <hr/>
             </div>
