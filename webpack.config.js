@@ -27,19 +27,10 @@ module.exports={
   },
   module: {
     loaders: [
-      { test: /\.(jpe?g|png|gif|svg|tsv|csv)$/i, loader: 'file-loader' },
+      { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader' },
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
       { test: /\.css/, loader: ExtractTextPlugin.extract("css")},
-      { test: /\.scss$/, loaders: [ 'style', 'css?sourceMap', 'sass?outputStyle=compressed' ]}
-    ]
-  },
-  sassLoader: {
-    includePaths: [
-      './node_modules',
-      // this is required only for NPM < 3.
-      // Dependencies are flat in NPM 3+ so pointing to
-      // the internal grommet/node_modules folder is not needed
-      './node_modules/grommet/node_modules'
+      { test: /\.scss$/, loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]}
     ]
   },
   plugins: [
@@ -47,9 +38,11 @@ module.exports={
     new CopyWebpackPlugin([
             { from: './src/icons', to: 'icons' },
             { from: './src/styles/entypo', to: 'styles/entypo'},
-            { from: './src/data/data.csv' }
+            { from: './src/*.png'},
+            { from: './src/*.xml'},
+            { from: './src/*.svg'},
+            { from: './src/*.ico'}
         ]),
-    new ExtractTextPlugin("styles.css"),
-    devFlagPlugin
+    new ExtractTextPlugin("styles.css")
   ]
 };
